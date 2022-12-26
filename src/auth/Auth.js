@@ -12,7 +12,7 @@ export const Auth = (props) => {
 
     const verify = async() => {
       try{
-        const response = await axios.get('/token',{
+        const response = await axios.get(process.env.REACT_APP_SERVER_URL+'/token',{
           headers:{
             'x-access-token':token
           }
